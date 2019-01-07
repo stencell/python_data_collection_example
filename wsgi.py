@@ -23,6 +23,7 @@ application = Flask(__name__)
 application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://user:mypassword@postgresdb/height_collector'
 db = SQLAlchemy(application)
 db.create_all()
+print("db.create_all() ran")
 
 # Example: http://flask-sqlalchemy.pocoo.org/2.3/quickstart/#a-minimal-application
 class Data(db.Model):
