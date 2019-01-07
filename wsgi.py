@@ -30,10 +30,12 @@ class Data(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email_ = db.Column(db.String(120), unique=True)
     height_ = db.Column(db.Integer)
+    print("__tablename__ ran")
 
     def __init__(self, email_, height_):
         self.email_ = email_
         self.height_ = height_
+        print("Data __init__ ran")
 
 @application.route("/")
 def index():
