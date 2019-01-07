@@ -31,6 +31,7 @@ class Data(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email_ = db.Column(db.String(120), unique=True)
     height_ = db.Column(db.Integer)
+    db.create_all()
     print("__tablename__ ran")
 
     def __init__(self, email_, height_):
