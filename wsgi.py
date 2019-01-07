@@ -43,6 +43,7 @@ def success():
     if request.method == 'POST':
         email = request.form['email_address']
         height = request.form['height']
+        print(email, height)
         # print(request.form) # This will give you an ImmutableMultiDict with all form values
         if db.session.query(Data).filter(Data.email_ == email).count() == 0:
             data = Data(email,height)
